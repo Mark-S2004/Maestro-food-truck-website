@@ -36,6 +36,7 @@ body {
     min-height: 100vh;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
+    background-color: var(--background-color);
 }
 
 /* A elements that don't have a class get default styles */
@@ -75,3 +76,39 @@ select {
 }
 
 /* End of CSS reset */
+
+:root {
+    --main-color: #A81620;
+    --secondary-color: #ede7b1;
+    --background-color: black;
+    --third-color: #646e78;
+    --fourth-color: #8d98a7;
+}
+
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24;
+    padding: 1vw;
+    color: var(--secondary-color);
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h1 {
+    color: var(--secondary-color);
+    font-size: clamp(10px, 10vw, 30px);
+}
+
+@media (min-width: 768px) {
+    #menu {
+        display: none;
+    }
+}
