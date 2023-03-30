@@ -1,0 +1,79 @@
+.hero {
+    background: #ede7b1;
+    min-height: 100vh;
+    width: 100%;
+    color: #8d98a7;
+    position: relative;
+}
+
+
+body {font-family: "Tahoma", Trebuchet MS, Sans-Serif;}
+        h1, h2, h3, h4, h5, h6 {
+          font-family: "Tahoma";
+          letter-spacing: 1px;
+        }
+.nav {
+    display: flex;
+    align-items: center;
+    padding: 20px 20px;
+    justify-content: center;
+
+}
+
+nav .menu-img {
+    width: 40px;
+    margin-top: 20px;
+   margin-left: 20px;
+    cursor:pointer;
+}
+
+nav .logo {
+    margin-top: 22px;
+    width: 160px;
+    
+}
+nav ul{
+    flex:1;
+    text-align: left;
+    
+    
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    justify-content: center;
+    margin:  20px;
+ }
+  nav ul li a{
+    text-decoration:none;
+    color: #ede7b1;
+    margin:  10px;
+    
+  }
+ 
+  button{
+
+   background: #823329;
+   margin-right: 20px;
+   border-radius:20px;
+   
+    height:40px;
+    width:100px;
+    border: 0;
+    outline: 0;
+}
+button span {
+    color: #ede7b1;
+  }
+ 
+  a .navbar-brand{
+margin-left: 20px;
+
+  }
+ ul navbar-nav{
+    text-align: left;
+ }
+
+ button navbar-toggler{
+    padding: 20px;
+ }
