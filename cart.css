@@ -112,3 +112,29 @@ h1 {
         display: none;
     }
 }
+
+/* Checkout button */
+main>a {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--main-color);
+    border-radius: 10px;
+    margin: 2vw;
+    text-decoration: none;
+    position: fixed;
+    bottom: 0px;
+    width: 96vw;
+}
+
+main>a:is(:hover, :focus) {
+    box-shadow: -5px 5px var(--fourth-color);
+    transform: translate(5px, -5px);
+    transition: 300ms ease-out;
+}
+
+main>a>span {
+    display: inline-block;
+    padding: 10px;
+    color: var(--secondary-color);
+}
