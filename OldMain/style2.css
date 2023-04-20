@@ -1,0 +1,115 @@
+body {
+    font-family: "Tahoma", Trebuchet MS, Sans-Serif;
+
+    margin: 0;
+    display: grid;
+    padding: 2vw;
+    align-items: start;
+    background:
+        linear-gradient(-50deg, #823329, #bcb77a);
+}
+#burger-button{
+    border: none;
+  cursor: pointer;
+  appearance: none;
+  background-color: inherit;
+}
+#menu {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+#menu-items {
+    margin-left: clamp(4rem, 20vw, 48rem);
+    position: relative;
+    z-index: 2;
+}
+
+#menu-items:hover>.menu-item {
+    opacity: 0.25;
+}
+
+#menu-items:hover>.menu-item:hover {
+    opacity: 1;
+}
+
+#maestro-menu-logo{
+
+}
+
+.menu-item {
+    color: white;
+    font-size: clamp(2rem, 6vw, 6rem);
+    font-family: "Tahoma", serif;
+    display: block;
+    text-decoration: none;
+    padding: clamp(0.2rem, 0.3vw, 0.8rem) 0rem;
+    transition: opacity 1000ms ease;
+}
+
+#menu-background-pattern {
+    height: 100vh;
+    width: 100vw;
+   /** background-image: radial-gradient(rgba(255, 255, 255, 0.1) 9%,
+            transparent 30%);**/
+            background: 
+		url("data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><foreignObject width=%22100px%22 height=%22100px%22><div xmlns=%22http://www.w3.org/1999/xhtml%22 style=%22color:transparent;text-shadow: 20px 10px rgba(255, 225, 30, .3), 0 0  brown;font-size:70px%22>🍔</div></foreignObject></svg>") ; 
+    background-position: 0% 0%;
+    opacity: 0.4;
+    background-size: 12vmin 12vmin;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+    transition: opacity 700ms ease,
+        background-size 800ms ease;
+}
+
+#menu-items:hover~#menu-background-pattern {
+    background-size: 11vmin 11vmin;
+    opacity: 0.2;
+}
+
+
+#menu[data-active-index="0"]>#menu-background-pattern {
+    background-position: 0% -60%;
+    
+}
+
+#menu[data-active-index="1"]>#menu-background-pattern {
+    background-position: 0% -120%;
+}
+
+#menu[data-active-index="2"]>#menu-background-pattern {
+    background-position: 0% -180%;
+}
+
+#menu[data-active-index="3"]>#menu-background-pattern {
+    background-position: 0% -240%;
+}
+
+.dropdown-open{
+    animation: open 0.3s ease;
+}
+
+@keyframes open{
+    0%{
+        transform: scaleY(0);
+    }
+    100%{
+        transform: scaleY(100);
+    }
+}
+.dropdown-close{
+    animation: close 0.3s ease-in-out forwards;
+}
+
+@keyframes open{
+    0%{
+        transform: scaleY(100);
+    }
+    100%{
+        transform: scaleY(0);
+    }
+}

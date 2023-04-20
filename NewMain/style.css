@@ -1,0 +1,84 @@
+/**The Background and font*/
+body {
+    font-family: "Nova Oval", Nova Oval , Serif;
+    margin: 0;
+    display: grid;
+    padding: 2vw;
+    align-items: start;
+    background:
+        linear-gradient(-50deg, #823329, #979363);
+}
+
+/**The Logo & Button*/
+#logo-button{
+    border: none;
+    cursor: pointer;
+    appearance: none;
+    background-color: inherit;
+}
+/**Menu and items*/
+#menu {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+}
+#menu-items {
+    margin-left: clamp(4rem, 10vw, 48rem);
+    position: relative;
+    z-index: 2;
+}
+.menu-item {
+    color: white;
+    font-size: clamp(2rem, 6vw, 6rem);
+    font-family: "Tahoma", serif;
+    display: block;
+    text-decoration: none;
+    padding: clamp(0.2rem, 0.3vw, 0.8rem) 0rem;
+    transition: opacity 1000ms ease;
+}
+
+#menu-closed{
+    margin-left: clamp(4rem, 10vw, 48rem);
+    position: relative;
+    z-index: 2;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+#menu-items {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 1;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+  }
+  
+  .menu-item {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+  
+  .menu-item:hover {
+    background-color: #ddd;
+  }
+  .menu-hidden {
+    display: none;
+  }
+  
+  .menu-open img {
+    transform: rotate(90deg);
+  }
+  #menu.menu-open {
+    display: block;
+  }
+  
+  #menu-closed.menu-open {
+    display: none;
+  }
+    
