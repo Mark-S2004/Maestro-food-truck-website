@@ -1,5 +1,9 @@
-from django.shortcuts import render
+from django.urls import reverse_lazy
+from django.views.generic.edit import CreateView
 
-# Create your views here.
-def signin(request):
-    return render(request, "account/signin.html")
+from .forms import CustomerCreationForm
+
+class SignUpView(CreateView):
+    form_class = CustomerCreationForm
+    success_url = reverse_lazy("homepage")
+    template_name = "registration/signup.html"

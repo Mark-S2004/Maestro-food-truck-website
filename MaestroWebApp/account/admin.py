@@ -1,5 +1,13 @@
 from django.contrib import admin
-from .models import Users
+from django.contrib.auth.admin import UserAdmin
 
-# Register your models here.
-admin.site.register(Users)
+from .forms import CustomerCreationForm, CustomerChangeForm
+from .models import Customer
+
+class CustomerAdmin(UserAdmin):
+    add_form = CustomerCreationForm
+    form = CustomerChangeForm
+    model = Customer
+    list_display = ['username', 'email', 'first_name', 'last_name', "phone", "address"]
+
+admin.site.register(Customer, CustomerAdmin)
