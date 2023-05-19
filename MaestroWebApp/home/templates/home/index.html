@@ -22,7 +22,7 @@
         class="navbar navbar-expand-lg navbar-light bg-light"
         style="background-color: #ede7b1"
       >
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="{% url 'homepage' %}">
           <img
             src="{% static 'home/images/Logo.png' %}"
             width="140"
@@ -50,7 +50,7 @@
           </ul>
           <div>
             <button class="button" type="button">
-              <a href="/signin.html">Sign in</a>
+              <a href="{% url 'signin' %}">Sign in</a>
             </button>
           </div>
         </div>
