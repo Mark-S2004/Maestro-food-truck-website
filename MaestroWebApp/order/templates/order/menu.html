@@ -190,11 +190,15 @@
             </p>
             <div class="u-list u-list-1">
               <div class="u-repeater u-repeater-1">
-                <div
+                <form
+                  method="post"
+                  action="{% url 'add-to-cart' %}"
                   class="u-align-right u-container-style u-image u-list-item u-repeater-item u-shading u-video-cover u-image-1"
                   data-image-width="996"
                   data-image-height="389"
                 >
+                  {% csrf_token %}
+                  <input name="menu-item" value="OriginalB" hidden />
                   <div
                     class="u-container-layout u-similar-container u-container-layout-2"
                   >
@@ -209,16 +213,16 @@
                         <h6 class="u-text u-text-palette-2-light-1 u-text-5">
                           200G&nbsp; 50L.E
                         </h6>
-                        <a
-                          href="https://nicepage.dev"
+                        <button
+                          type="submit"
                           class="u-active-palette-2-light-1 u-border-none u-btn u-btn-round u-button-style u-hover-palette-2-light-1 u-palette-2-base u-radius-50 u-btn-1"
                         >
-                          add to cart</a
-                        >
+                          add to cart
+                        </button>
                       </div>
                     </div>
                   </div>
-                </div>
+                </form>
                 <div
                   class="u-align-right u-container-style u-image u-list-item u-repeater-item u-shading u-image-2"
                   data-image-width="996"
