@@ -13,6 +13,17 @@ class Customer(AbstractUser):
     phone = PhoneNumberField(null=True, blank=True, unique=True)
     address = models.CharField(max_length=255, blank=True, null=True)
 
+    OriginalB = models.PositiveSmallIntegerField(default=0)
+    OriginalC = models.PositiveSmallIntegerField(default=0)
+    ChiliB = models.PositiveSmallIntegerField(default=0)
+    ViolaB = models.PositiveSmallIntegerField(default=0)
+    HardRockB = models.PositiveSmallIntegerField(default=0)
+    MaestroB = models.PositiveSmallIntegerField(default=0)
+    BeethovenB = models.PositiveSmallIntegerField(default=0)
+    RanchC = models.PositiveSmallIntegerField(default=0)
+    SticksC = models.PositiveSmallIntegerField(default=0)
+    StripsC = models.PositiveSmallIntegerField(default=0)
+
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = []
 
