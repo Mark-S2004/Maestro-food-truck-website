@@ -19,6 +19,8 @@ document.body.querySelectorAll(".add").forEach(item => {
         const quantityNode = item.parentElement.querySelector(".quantity")
         quantityNode.textContent = Number(quantityNode.textContent) + 1
         calculateProductPrice(item.parentElement.parentElement)
+        item.parentElement.parentElement.querySelector("input[name='count']").value = Number(quantityNode.textContent)
+        item.parentElement.parentElement.querySelector("form").submit()
     })
 })
 
@@ -29,5 +31,7 @@ document.body.querySelectorAll(".remove").forEach(item => {
             quantityNode.textContent = Number(quantityNode.textContent) - 1
         }
         calculateProductPrice(item.parentElement.parentElement)
+        item.parentElement.parentElement.querySelector("input[name='count']").value = Number(quantityNode.textContent)
+        item.parentElement.parentElement.querySelector("form").submit()
     })
 })

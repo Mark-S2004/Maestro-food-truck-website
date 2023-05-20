@@ -24,30 +24,25 @@
       >
     </header>
     <main>
+      {% for attr, price, count in menu_items %} {% if count %}
       <section>
         <img src="https://unsplash.it/100/100" alt="Product Picture" />
         <div>
-          <h2>Chicken Burger</h2>
-          <span>EGP <span class="price">72</span></span>
+          <h2>{{ attr }}</h2>
+          <span>EGP <span class="price">{{ price }}</span></span>
         </div>
         <div>
           <i class="material-symbols-outlined remove">remove</i
-          ><span class="quantity">1</span>
+          ><span class="quantity">{{ count }}</span>
           <i class="material-symbols-outlined add">add</i>
         </div>
+        <form action="{% url 'set-cart' %}" method="post">
+          {% csrf_token %}
+          <input name="menu-item" value="{{attr}}" hidden />
+          <input name="count" hidden />
+        </form>
       </section>
-      <section>
-        <img src="https://unsplash.it/100/100" alt="Product Picture" />
-        <div>
-          <h2>Beef Burger</h2>
-          <span>EGP <span class="price">72</span></span>
-        </div>
-        <div>
-          <i class="material-symbols-outlined remove">remove</i
-          ><span class="quantity">1</span>
-          <i class="material-symbols-outlined add">add</i>
-        </div>
-      </section>
+      {% endif %} {% endfor %}
       <a href="{% url 'checkout' %}">
         <span>Go to Checkout</span>
         <span>EGP <span id="total-price">00.00</span></span>
