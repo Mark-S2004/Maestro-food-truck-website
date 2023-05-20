@@ -1,4 +1,4 @@
-{% load static %}
+b{% load static %}
 <!DOCTYPE html>
 <html style="font-size: 16px" lang="en">
   <head>
@@ -215,7 +215,7 @@
                         </h6>
                         <button
                           type="submit"
-                          class="u-active-palette-2-light-1 u-border-none u-btn u-btn-round u-button-style u-hover-palette-2-light-1 u-palette-2-base u-radius-50 u-btn-1"
+                          class="u-active-palette-2-light-1 u-border-none u-btn u-btn-round u-button-style u-hover-palette-2-light-1 u-palette-2-base u-radius-50 u-btn-2"
                         >
                           add to cart
                         </button>
@@ -223,11 +223,15 @@
                     </div>
                   </div>
                 </form>
-                <div
+                <form
+                  method="post"
+                  action="{% url 'add-to-cart' %}"
                   class="u-align-right u-container-style u-image u-list-item u-repeater-item u-shading u-image-2"
                   data-image-width="996"
                   data-image-height="389"
                 >
+                  {% csrf_token %}
+                  <input name="menu-item" value="ChiliB" hidden />
                   <div
                     class="u-container-layout u-similar-container u-container-layout-4"
                   >
@@ -244,21 +248,25 @@
                         <h6 class="u-text u-text-palette-2-light-1 u-text-8">
                           200G&nbsp; 60L.E
                         </h6>
-                        <a
-                          href="https://nicepage.me"
+                        <button
+                          type="submit"
                           class="u-active-palette-2-light-1 u-border-none u-btn u-btn-round u-button-style u-hover-palette-2-light-1 u-palette-2-base u-radius-50 u-btn-2"
                         >
-                          add to cart</a
-                        >
+                          add to cart
+                        </button>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div
+                </form>
+                <form
+                  method="post"
+                  action="{% url 'add-to-cart' %}"
                   class="u-align-right u-container-style u-image u-list-item u-repeater-item u-shading u-video-cover u-image-3"
                   data-image-width="996"
                   data-image-height="389"
                 >
+                  {% csrf_token %}
+                  <input name="menu-item" value="ViolaB" hidden />
                   <div
                     class="u-container-layout u-similar-container u-container-layout-6"
                   >
@@ -277,20 +285,25 @@
                         <h6 class="u-text u-text-palette-2-light-1 u-text-11">
                           200G&nbsp; 60L.E
                         </h6>
-                        <a
-                          href="https://nicepage.best"
+                        <button
+                          type="submit"
                           class="u-active-palette-2-light-1 u-border-none u-btn u-btn-round u-button-style u-hover-palette-2-light-1 u-palette-2-base u-radius-50 u-btn-3"
-                          >add to cart</a
                         >
+                          add to cart
+                        </button>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div
+                </form>
+                <form
+                  method="post"
+                  action="{% url 'add-to-cart' %}"
                   class="u-align-right u-container-style u-image u-list-item u-repeater-item u-shading u-video-cover u-image-4"
                   data-image-width="996"
                   data-image-height="389"
                 >
+                  {% csrf_token %}
+                  <input name="menu-item" value="HardRockB" hidden />
                   <div
                     class="u-container-layout u-similar-container u-container-layout-8"
                   >
@@ -309,20 +322,25 @@
                         <h6 class="u-text u-text-palette-2-light-1 u-text-14">
                           200G&nbsp; 65L.E
                         </h6>
-                        <a
-                          href="https://nicepage.com/k/love-html-templates"
+                        <button
+                          type="submit"
                           class="u-active-palette-2-light-1 u-border-none u-btn u-btn-round u-button-style u-hover-palette-2-light-1 u-palette-2-base u-radius-50 u-btn-4"
-                          >add to cart</a
                         >
+                          add to cart
+                        </button>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div
+                </form>
+                <form
+                  method="post"
+                  action="{% url 'add-to-cart' %}"
                   class="u-align-right u-container-style u-image u-list-item u-repeater-item u-shading u-video-cover u-image-5"
                   data-image-width="996"
                   data-image-height="389"
                 >
+                  {% csrf_token %}
+                  <input name="menu-item" value="MaestroB" hidden />
                   <div
                     class="u-container-layout u-similar-container u-container-layout-10"
                   >
@@ -341,20 +359,25 @@
                         <h6 class="u-text u-text-palette-2-light-1 u-text-17">
                           220G&nbsp; 65L.E
                         </h6>
-                        <a
-                          href="https://nicepage.com"
+                        <button
+                          type="submit"
                           class="u-active-palette-2-light-1 u-border-none u-btn u-btn-round u-button-style u-hover-palette-2-light-1 u-palette-2-base u-radius-50 u-btn-5"
-                          >add to cart</a
                         >
+                          add to cart
+                        </button>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div
+                </form>
+                <form
+                  method="post"
+                  action="{% url 'add-to-cart' %}"
                   class="u-align-right u-container-style u-image u-list-item u-repeater-item u-shading u-video-cover u-image-6"
                   data-image-width="996"
                   data-image-height="389"
                 >
+                  {% csrf_token %}
+                  <input name="menu-item" value="BeethovenB" hidden />
                   <div
                     class="u-container-layout u-similar-container u-container-layout-12"
                   >
@@ -373,15 +396,16 @@
                         <h6 class="u-text u-text-palette-2-light-1 u-text-20">
                           200G&nbsp; 65L.E
                         </h6>
-                        <a
-                          href="https://nicepage.com/templates"
+                        <button
+                          type="submit"
                           class="u-active-palette-2-light-1 u-border-none u-btn u-btn-round u-button-style u-hover-palette-2-light-1 u-palette-2-base u-radius-50 u-btn-6"
-                          >add to cart</a
                         >
+                          add to cart
+                        </button>
                       </div>
                     </div>
                   </div>
-                </div>
+                </form>
               </div>
             </div>
           </div>
@@ -402,11 +426,15 @@
             </p>
             <div class="u-list u-list-2">
               <div class="u-repeater u-repeater-2">
-                <div
+                <form
+                  method="post"
+                  action="{% url 'add-to-cart' %}"
                   class="u-align-right u-container-style u-image u-list-item u-repeater-item u-shading u-video-cover u-image-7"
                   data-image-width="996"
                   data-image-height="389"
                 >
+                  {% csrf_token %}
+                  <input name="menu-item" value="OriginalC" hidden />
                   <div
                     class="u-container-layout u-similar-container u-container-layout-15"
                   >
@@ -418,21 +446,25 @@
                         <h6 class="u-text u-text-palette-2-light-1 u-text-24">
                           40L.E
                         </h6>
-                        <a
-                          href="https://nicepage.dev"
+                        <button
+                          type="submit"
                           class="u-active-palette-2-light-1 u-border-none u-btn u-btn-round u-button-style u-hover-palette-2-light-1 u-palette-2-base u-radius-50 u-btn-7"
                         >
-                          add to cart</a
-                        >
+                          add to cart
+                        </button>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div
+                </form>
+                <form
+                  method="post"
+                  action="{% url 'add-to-cart' %}"
                   class="u-align-right u-container-style u-image u-list-item u-repeater-item u-shading u-image-8"
                   data-image-width="996"
                   data-image-height="389"
                 >
+                  {% csrf_token %}
+                  <input name="menu-item" value="RanchC" hidden />
                   <div
                     class="u-container-layout u-similar-container u-container-layout-17"
                   >
@@ -446,21 +478,25 @@
                         >
                           50L.E
                         </h6>
-                        <a
-                          href="https://nicepage.me"
+                        <button
+                          type="submit"
                           class="u-active-palette-2-light-1 u-border-none u-btn u-btn-round u-button-style u-hover-palette-2-light-1 u-palette-2-base u-radius-50 u-btn-8"
                         >
-                          add to cart</a
-                        >
+                          add to cart
+                        </button>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div
+                </form>
+                <form
+                  method="post"
+                  action="{% url 'add-to-cart' %}"
                   class="u-align-right u-container-style u-image u-list-item u-repeater-item u-shading u-video-cover u-image-9"
                   data-image-width="996"
                   data-image-height="389"
                 >
+                  {% csrf_token %}
+                  <input name="menu-item" value="SticksC" hidden />
                   <div
                     class="u-container-layout u-similar-container u-container-layout-19"
                   >
@@ -476,20 +512,25 @@
                         >
                           55L.E
                         </h6>
-                        <a
-                          href="https://nicepage.best"
-                          class="u-active-palette-2-light-1 u-border-none u-btn u-btn-round u-button-style u-hover-palette-2-light-1 u-palette-2-base u-radius-50 u-btn-9"
-                          >add to cart</a
+                        <button
+                          type="submit"
+                          class="u-active-palette-2-litype='submit' u-btn u-btn-round u-button-style u-hover-palette-2-light-1 u-palette-2-base u-radius-50 u-btn-9"
                         >
+                          add to cart
+                        </button>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div
+                </form>
+                <form
+                  method="post"
+                  action="{% url 'add-to-cart' %}"
                   class="u-align-right u-container-style u-image u-list-item u-repeater-item u-shading u-video-cover u-image-10"
                   data-image-width="996"
                   data-image-height="389"
                 >
+                  {% csrf_token %}
+                  <input name="menu-item" value="StripsC" hidden />
                   <div
                     class="u-container-layout u-similar-container u-container-layout-21"
                   >
@@ -505,15 +546,16 @@
                         >
                           30L.E
                         </h6>
-                        <a
-                          href="https://nicepage.com/k/love-html-templates"
-                          class="u-active-palette-2-light-1 u-border-none u-btn u-btn-round u-button-style u-hover-palette-2-light-1 u-palette-2-base u-radius-50 u-btn-10"
-                          >add to cart</a
+                        <button
+                          type="submit"
+                          class="u-active-palette-2-lightype='submit' u-btn u-btn-round u-button-style u-hover-palette-2-light-1 u-palette-2-base u-radius-50 u-btn-10"
                         >
+                          add to cart
+                        </button>
                       </div>
                     </div>
                   </div>
-                </div>
+                </form>
               </div>
             </div>
           </div>
@@ -529,11 +571,15 @@
           <div class="u-container-layout u-container-layout-23">
             <div class="u-list u-list-3">
               <div class="u-repeater u-repeater-3">
-                <div
+                <form
+                  method="post"
+                  action="{% url 'add-to-cart' %}"
                   class="u-align-right u-container-style u-image u-list-item u-repeater-item u-shading u-video-cover u-image-11"
                   data-image-width="996"
                   data-image-height="389"
                 >
+                  {% csrf_token %}
+                  <input name="menu-item" value="" hidden />
                   <div
                     class="u-container-layout u-similar-container u-container-layout-24"
                   >
@@ -545,21 +591,25 @@
                         <h6 class="u-text u-text-palette-2-light-1 u-text-33">
                           15L.E
                         </h6>
-                        <a
-                          href="https://nicepage.dev"
+                        <button
+                          type="submit"
                           class="u-active-palette-2-light-1 u-border-none u-btn u-btn-round u-button-style u-hover-palette-2-light-1 u-palette-2-base u-radius-50 u-btn-11"
                         >
-                          add to cart</a
-                        >
+                          add to cart
+                        </button>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div
+                </form>
+                <form
+                  method="post"
+                  action="{% url 'add-to-cart' %}"
                   class="u-align-right u-container-style u-image u-list-item u-repeater-item u-shading u-image-12"
                   data-image-width="996"
                   data-image-height="389"
                 >
+                  {% csrf_token %}
+                  <input name="menu-item" value="" hidden />
                   <div
                     class="u-container-layout u-similar-container u-container-layout-26"
                   >
@@ -573,21 +623,26 @@
                         >
                           20L.E
                         </h6>
-                        <a
-                          href="https://nicepage.me"
-                          class="u-active-palette-2-light-1 u-border-none u-btn u-btn-round u-button-style u-hover-palette-2-light-1 u-palette-2-base u-radius-50 u-btn-12"
+                        <button
+                          type="submit"
+                          class="u-active-palette-2-light-1 u-border-none u-btn u-btn-round u-button-style u-hover-palette-2-light-1 u-palette-2-base u-radius-50 u-btn-11"
                         >
-                          add to cart</a
+                          add to cart
+                        </button>
                         >
                       </div>
                     </div>
                   </div>
-                </div>
-                <div
+                </form>
+                <form
+                  method="post"
+                  action="{% url 'add-to-cart' %}"
                   class="u-align-right u-container-style u-image u-list-item u-repeater-item u-shading u-video-cover u-image-13"
                   data-image-width="996"
                   data-image-height="389"
                 >
+                  {% csrf_token %}
+                  <input name="menu-item" value="" hidden />
                   <div
                     class="u-container-layout u-similar-container u-container-layout-28"
                   >
@@ -601,20 +656,25 @@
                         >
                           25L.E
                         </h6>
-                        <a
-                          href="https://nicepage.best"
-                          class="u-active-palette-2-light-1 u-border-none u-btn u-btn-round u-button-style u-hover-palette-2-light-1 u-palette-2-base u-radius-50 u-btn-13"
-                          >add to cart</a
+                        <button
+                          type="submit"
+                          class="u-active-palette-2-light-1 u-border-none u-btn u-btn-round u-button-style u-hover-palette-2-light-1 u-palette-2-base u-radius-50 u-btn-11"
                         >
+                          add to ctype='>add to cart
+                        </button>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div
+                </form>
+                <form
+                  method="post"
+                  action="{% url 'add-to-cart' %}"
                   class="u-align-right u-container-style u-image u-list-item u-repeater-item u-shading u-video-cover u-image-14"
                   data-image-width="996"
                   data-image-height="389"
                 >
+                  {% csrf_token %}
+                  <input name="menu-item" value="" hidden />
                   <div
                     class="u-container-layout u-similar-container u-container-layout-30"
                   >
@@ -628,15 +688,16 @@
                         >
                           20L.E
                         </h6>
-                        <a
-                          href="https://nicepage.com/k/love-html-templates"
-                          class="u-active-palette-2-light-1 u-border-none u-btn u-btn-round u-button-style u-hover-palette-2-light-1 u-palette-2-base u-radius-50 u-btn-14"
-                          >add to cart</a
+                        <button
+                          type="submit"
+                          class="u-active-palette-2-light-1 u-border-none u-btn u-btn-round u-button-style u-hover-palette-2-light-1 u-palette-2-base u-radius-50 u-btn-11"
                         >
+                          add to cart
+                        </button>
                       </div>
                     </div>
                   </div>
-                </div>
+                </form>
               </div>
             </div>
           </div>
